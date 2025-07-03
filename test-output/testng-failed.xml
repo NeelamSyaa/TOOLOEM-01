@@ -3,13 +3,34 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="com.OEMTestCases.oem.DwonlSimpleFileTest">
+        <methods>
+          <include name="teardwon"/>
+          <include name="simpleFiledwonlod"/>
+          <include name="setbrowser"/>
+        </methods>
+      </class> <!-- com.OEMTestCases.oem.DwonlSimpleFileTest -->
+      <class name="com.OEMTestCases.oem.AddNewDeviceTest">
+        <methods>
+          <include name="teardwon"/>
+          <include name="addingsigledata"/>
+          <include name="setbrowser"/>
+        </methods>
+      </class> <!-- com.OEMTestCases.oem.AddNewDeviceTest -->
       <class name="com.OEMTestCases.oem.LoginTest">
         <methods>
           <include name="teardwon"/>
-          <include name="loginTest"/>
+          <include name="loginTest" invocation-numbers="0"/>
           <include name="setbrowser"/>
         </methods>
       </class> <!-- com.OEMTestCases.oem.LoginTest -->
+      <class name="com.OEMTestCases.oem.DropDWobnBtnTest">
+        <methods>
+          <include name="teardwon"/>
+          <include name="searchdata"/>
+          <include name="setbrowser"/>
+        </methods>
+      </class> <!-- com.OEMTestCases.oem.DropDWobnBtnTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

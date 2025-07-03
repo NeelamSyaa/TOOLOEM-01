@@ -11,10 +11,11 @@ import com.utilities.oem.ConfigReader;
 
 public class AddNewDeviceTest extends Base{
 	AddNewDevicePage ad;
-	LoginTest lg;
-	@Test()
-	public void addingsigledata( ) throws IOException {
-
+	
+	 @Test(priority = 4)
+	public void addingsigledata() throws IOException {
+		
+	
 		ConfigReader.loadProperties();
 		String sn = ConfigReader.getProperty("Serial_No");
 		String im = ConfigReader.getProperty("imei");

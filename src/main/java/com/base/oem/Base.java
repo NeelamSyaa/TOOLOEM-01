@@ -20,9 +20,8 @@ public class Base {
 
 	@BeforeMethod
 	@Parameters("browser")
-	public void setbrowser(@Optional("edge") String browser) throws IllegalAccessException, IOException {
+	public void setbrowser(@Optional("chrome") String browser) throws IllegalAccessException, IOException {
 		ConfigReader.loadProperties();
-		
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
@@ -35,6 +34,7 @@ public class Base {
 			throw new RuntimeException("Browser not supported: " + browser);
 		}
 
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get(ConfigReader.getProperty("baseURL"));

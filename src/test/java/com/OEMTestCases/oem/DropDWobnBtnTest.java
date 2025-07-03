@@ -14,7 +14,7 @@ import com.utilities.oem.ExcelUtilSerialNumber;
 public class DropDWobnBtnTest extends Base {
 
 	Searchdropdwon sdpdn;
-	@Test
+	@Test(priority = 3)
 	public void searchdata(String u, String p ) throws EncryptedDocumentException, IOException {
 		LoginPage LPDP = new  LoginPage(driver);	
 		LPDP.passwordlogin(u);
